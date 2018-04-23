@@ -26,7 +26,7 @@ dpkg -i $_DEB_NAME
 rm $_DEB_NAME
 apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1704/x86_64/7fa2af80.pub
 apt-get update
-apt-get install -y -qq cuda
+apt-get install -y -qq --no-install-recommends cuda-9-1
 
 
 # Auto-detect platform
