@@ -15,9 +15,12 @@ apt-get install -y -qq \
 	python-crcmod less nano vim git locales make \
 	dirmngr \
 	liblz4-tool pigz bzip2 lbzip2 zstd \
-	libtool autoconf g++ \
+	libtool autoconf g++-6 gcc-6 \
 	ant \
 	openjdk-8-jre openjdk-8-jdk
+
+ln -s /usr/bin/gcc-6 /usr/local/cuda/bin/gcc
+ln -s /usr/bin/g++-6 /usr/local/cuda/bin/g++
 
 # Add CUDA Toolkit
 _DEB_NAME=cuda-repo-ubuntu1704_9.1.85-1_amd64.deb
