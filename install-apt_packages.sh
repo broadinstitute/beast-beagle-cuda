@@ -16,9 +16,18 @@ apt-get install -y -qq \
 	dirmngr \
 	liblz4-tool pigz bzip2 lbzip2 zstd \
 	libtool autoconf g++ \
-        ant \
-	openjdk-8-jre openjdk-8-jdk \
-	cuda
+	ant \
+	openjdk-8-jre openjdk-8-jdk
+
+# Add CUDA Toolkit
+_DEB_NAME=cuda-repo-ubuntu1704_9.1.85-1_amd64.deb
+wget http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1704/x86_64/$_DEB_NAME
+dpkg -i $_DEB_NAME
+rm $_DEB_NAME
+apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1704/x86_64/7fa2af80.pub
+apt-get update
+apt-get install cuda
+
 
 # Auto-detect platform
 DEBIAN_PLATFORM="$(lsb_release -c -s)"
