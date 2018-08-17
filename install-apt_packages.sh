@@ -19,6 +19,7 @@ apt-get install -y -qq \
 	ant \
 	openjdk-8-jre openjdk-8-jdk
 
+mkdir -p /usr/local/cuda/bin
 ln -s /usr/bin/gcc-6 /usr/local/cuda/bin/gcc
 ln -s /usr/bin/g++-6 /usr/local/cuda/bin/g++
 
