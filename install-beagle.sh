@@ -1,21 +1,18 @@
 #!/bin/bash
 
+set -e -o pipefail
+
 cd /opt/docker
 
-git clone https://github.com/beagle-dev/beagle-lib.git
+# beagle 3.1.2, known working with beast 1.10.4
+git clone --depth=1 --branch="v3.1.2" https://github.com/beagle-dev/beagle-lib.git
 cd beagle-lib
-## Nov 2017. Future commits break things?
-#git checkout bcd2bf1a0b17703e8e24d56e0f1b5b4967470b8b
 
 ./autogen.sh
-./configure --prefix=/usr/local
+./configure --disable-sse --disable-march-native --prefix=/usr/local
 
 make
-
+make install
 make check
 
-make install
-ldconfig
-
-examples/genomictest/genomictest
-examples/tinytest/tinytest
+ldconfig # LD_LIBRARY_PATH is also set in the Dockerfile to include /usr/local/lib
