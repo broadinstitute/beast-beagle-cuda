@@ -16,3 +16,6 @@ make install
 make check
 
 ldconfig # LD_LIBRARY_PATH is also set in the Dockerfile to include /usr/local/lib
+
+examples/synthetictest/synthetictest
+examples/tinytest/tinytest
