@@ -18,25 +18,14 @@ apt-get install -y -qq \
 	libtool autoconf g++-6 gcc-6 \
 	ant \
 	openjdk-8-jre openjdk-8-jdk
+    #
 
 mkdir -p /usr/local/cuda/bin
 ln -s /usr/bin/gcc-6 /usr/local/cuda/bin/gcc
 ln -s /usr/bin/g++-6 /usr/local/cuda/bin/g++
 
-# Add CUDA Toolkit
-_DEB_NAME=cuda-repo-ubuntu1704_9.1.85-1_amd64.deb
-wget http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1704/x86_64/$_DEB_NAME
-dpkg -i $_DEB_NAME
-rm $_DEB_NAME
-apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1704/x86_64/7fa2af80.pub
-apt-get update
-apt-get install -y -qq --no-install-recommends cuda-9-1
-
-
 # Auto-detect platform
 DEBIAN_PLATFORM="$(lsb_release -c -s)"
-#override for google cloud sdk
-DEBIAN_PLATFORM="artful"
 echo "Debian platform: $DEBIAN_PLATFORM"
 
 # Add source for gcloud sdk
@@ -50,6 +39,6 @@ apt-get install -y -qq --no-install-recommends \
 
 # Upgrade and clean
 apt-get upgrade -y
-apt-get clean
+apt-get clean -y
 
 locale-gen en_US.UTF-8
