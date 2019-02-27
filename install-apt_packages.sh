@@ -26,8 +26,6 @@ ln -s /usr/bin/g++-6 /usr/local/cuda/bin/g++
 
 # Auto-detect platform
 DEBIAN_PLATFORM="$(lsb_release -c -s)"
-#override for google cloud sdk
-DEBIAN_PLATFORM="artful"
 echo "Debian platform: $DEBIAN_PLATFORM"
 
 # Add source for gcloud sdk
