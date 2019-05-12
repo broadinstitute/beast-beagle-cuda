@@ -2,7 +2,7 @@
 
 beast_version="1.10.1"
 
-wget --quiet https://github.com/beast-dev/beast-mcmc/releases/download/v1.10.4/BEASTv${beast_version}.tgz
+wget --quiet https://github.com/beast-dev/beast-mcmc/releases/download/v${beast_version}/BEASTv${beast_version}.tgz
 tar -xzpf BEASTv${beast_version}.tgz
 rm BEASTv${beast_version}.tgz
 
