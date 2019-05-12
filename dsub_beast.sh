@@ -149,5 +149,5 @@ dsub \
   --env BEAGLE_ORDER="${BEAGLE_ORDER}" BEAST_EXTRA_ARGS="${BEAST_EXTRA_ARGS}" \
   --script "${SCRIPTPATH}/run_beast.sh"  \
   --boot-disk-size 15 \
-  "${ACCELERATOR_SPEC}"
+  ${ACCELERATOR_SPEC}
   #--wait
