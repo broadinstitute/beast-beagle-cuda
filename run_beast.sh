@@ -20,5 +20,5 @@ pwd
 cd $OUT_DIR
 beast -beagle_info > "${OUTPUT_PREFIX}.out"
 pwd 
-beast -beagle_GPU -beagle_cuda -beagle_double -beagle_scaling always -beagle_order ${BEAGLE_ORDER} ${INPUT_FILE} >> "${OUTPUT_PREFIX}.out"
+beast -beagle_GPU -beagle_cuda -beagle_double -beagle_scaling always -beagle_order ${BEAGLE_ORDER} ${BEAST_EXTRA_ARGS} ${INPUT_FILE} >> "${OUTPUT_PREFIX}.out"
 ls 
