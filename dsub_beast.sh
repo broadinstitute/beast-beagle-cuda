@@ -61,6 +61,18 @@ function print_usage(){
   echo "          BEAST_EXTRA_ARGS='-beagle_instances 4' $(basename $0) gs://path/to/in.xml gcp-project-name num_gpus [beagle_order]"
 }
 
+hash dsub &> /dev/null
+if [ $? -ne 0 ]; then
+  echo ""
+  echo "IMPORTANT: dsub must be installed and available to use this script"
+  echo ""
+  echo " -> Follow the dsub instructions to Get Started on Google Cloud:"
+  echo "      https://github.com/DataBiosphere/dsub#getting-started-on-google-cloud"
+  echo " -> Install dsub:"
+  echo "      https://github.com/DataBiosphere/dsub"
+  exit 1
+fi
+
 if [ $# -eq 0 ] || [ $# -lt 3 ]; then
     print_usage
     exit 1
