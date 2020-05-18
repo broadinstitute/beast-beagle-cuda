@@ -36,4 +36,4 @@ RUN /opt/docker/install-beast.sh
 
 ENV BEAST="/usr/local"
 
-ENTRYPOINT ["/bin/bash"]
+CMD ["/bin/bash"]
