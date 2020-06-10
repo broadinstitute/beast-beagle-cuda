@@ -4,7 +4,7 @@ set -e -o pipefail
 
 cd /opt/docker
 
-# beagle 3.1.2, known working with beast 1.10.4
+# beagle 3.1.2, known working with beast 1.10.5pre
 git clone --depth=1 --branch="v3.1.2" https://github.com/beagle-dev/beagle-lib.git
 cd beagle-lib
 

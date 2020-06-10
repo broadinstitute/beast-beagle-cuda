@@ -41,7 +41,7 @@ function print_usage(){
   echo "        Docker images have been built for several versions of BEAST."
   echo "        The Docker image to be used can be selected by the BEAST_VERSION environment variable."
   echo "        For example:"
-  echo "          BEAST_VERSION='1.10.4' $(basename $0) gs://path/to/in.xml gcp-project-name num_gpus [beagle_order]"
+  echo "          BEAST_VERSION='1.10.5pre' $(basename $0) gs://path/to/in.xml gcp-project-name num_gpus [beagle_order]"
   echo "        For available versions of BEAST, see the tags on Quay.io:"
   echo "          https://quay.io/repository/broadinstitute/beast-beagle-cuda?tab=tags"
   echo "        If BEAST_VERSION is not specified the 'latest' tag will be used."
