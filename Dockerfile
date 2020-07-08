@@ -1,4 +1,4 @@
-FROM nvidia/cuda:9.2-devel-ubuntu18.04
+FROM nvidia/cuda:10.0-devel-ubuntu18.04
 
 # CUDA version must be compatible with driver version of host:
 # CUDA Toolkit          Linux x86_64 Driver Version
