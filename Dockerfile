@@ -1,4 +1,4 @@
-FROM nvidia/cuda:11.4.2-devel-ubuntu20.04
+FROM nvidia/cuda:11.0.3-devel-ubuntu20.04
 
 # CUDA version must be compatible with driver version of host:
 #      via: https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html
@@ -7,10 +7,10 @@ FROM nvidia/cuda:11.4.2-devel-ubuntu20.04
 #
 # CUDA Toolkit          Linux x86_64 Driver Version
 #--------------------------------------------------
-# CUDA 11.5             >= 495.29.05
-# CUDA 11.4             >= 470.82.01
-# CUDA 11.4             >= 470.57.02
-# CUDA 11.4             >= 470.57.02
+# CUDA 11.5.1           >= 495.29.05
+# CUDA 11.4.3           >= 470.82.01
+# CUDA 11.4.2           >= 470.57.02
+# CUDA 11.4.1           >= 470.57.02
 # CUDA 11.4.0           >= 470.42.01
 # CUDA 11.3.1           >= 465.19.01
 # CUDA 11.3.0           >= 465.19.01
