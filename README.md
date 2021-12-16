@@ -7,6 +7,7 @@ GPU-accelerated Docker images containing [BEAST](http://beast.community/about) a
 ## Instructions
 * (Follow the `dsub` instructions to [Get Started on Google Cloud](https://github.com/DataBiosphere/dsub#getting-started-on-google-cloud))
 * Install [dsub](https://github.com/DataBiosphere/dsub)
+* [Enable the required GCP APIs](https://console.cloud.google.com/flows/enableapi?apiid=lifesciences.googleapis.com,storage_component,compute_component&redirect=https://console.cloud.google.com)
 * Create an input XML for BEAST (via [BEAUTi](http://beast.community/beauti))
 * Transfer the XML file to a GS bucket
 * Call `dsub_beast.sh`:

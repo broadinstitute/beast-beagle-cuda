@@ -150,7 +150,7 @@ echo "DOCKER_IMAGE: ${DOCKER_IMAGE}${DOCKER_IMAGE_TAG}"
 echo "BEAST_EXTRA_ARGS:   ${BEAST_EXTRA_ARGS}"
 
 dsub \
-  --provider=google-v2 \
+  --provider=google-cls-v2 \
   --project "${GCP_PROJECT}" \
   --zone "us*" \
   --image "${DOCKER_IMAGE}${DOCKER_IMAGE_TAG}" \
