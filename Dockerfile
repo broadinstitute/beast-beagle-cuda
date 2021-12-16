@@ -1,11 +1,26 @@
 FROM nvidia/cuda:11.4.2-devel-ubuntu20.04
 
 # CUDA version must be compatible with driver version of host:
-# via https://docs.nvidia.com/deploy/cuda-compatibility/#minor-version-compatibility
+#      via: https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html
+# see also: https://cloud.google.com/container-optimized-os/docs/how-to/run-gpus#install
+#           https://cloud.google.com/container-optimized-os/docs/release-notes
 #
 # CUDA Toolkit          Linux x86_64 Driver Version
 #--------------------------------------------------
-# CUDA 11.x             >= 450.80.02
+# CUDA 11.5             >= 495.29.05
+# CUDA 11.4             >= 470.82.01
+# CUDA 11.4             >= 470.57.02
+# CUDA 11.4             >= 470.57.02
+# CUDA 11.4.0           >= 470.42.01
+# CUDA 11.3.1           >= 465.19.01
+# CUDA 11.3.0           >= 465.19.01
+# CUDA 11.2.2           >= 460.32.03
+# CUDA 11.2.1           >= 460.32.03
+# CUDA 11.2.0           >= 460.27.03
+# CUDA 11.1.1           >= 455.32
+# CUDA 11.1             >= 455.23
+# CUDA 11.0.3           >= 450.51.06
+# CUDA 11.0.2           >= 450.51.05
 # CUDA 10.2             >= 440.33
 # CUDA 10.1             >= 418.39
 # CUDA 10.0 (10.0.130)  >= 410.48
