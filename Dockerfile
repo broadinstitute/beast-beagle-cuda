@@ -1,7 +1,13 @@
-FROM nvidia/cuda:10.0-devel-ubuntu18.04
+FROM nvidia/cuda:11.4.2-devel-ubuntu20.04
 
 # CUDA version must be compatible with driver version of host:
+# via https://docs.nvidia.com/deploy/cuda-compatibility/#minor-version-compatibility
+#
 # CUDA Toolkit          Linux x86_64 Driver Version
+#--------------------------------------------------
+# CUDA 11.x             >= 450.80.02
+# CUDA 10.2             >= 440.33
+# CUDA 10.1             >= 418.39
 # CUDA 10.0 (10.0.130)  >= 410.48
 # CUDA 9.2 (9.2.88)     >= 396.26
 # CUDA 9.1 (9.1.85)     >= 390.46
