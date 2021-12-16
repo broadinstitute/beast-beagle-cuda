@@ -153,7 +153,6 @@ dsub \
   --provider=google-v2 \
   --project "${GCP_PROJECT}" \
   --zone "us*" \
-  --nvidia-driver-version "396.37" \
   --image "${DOCKER_IMAGE}${DOCKER_IMAGE_TAG}" \
   --input "INPUT_FILE=${IN_XML}" \
   --output "OUTPUT_FILES=${OUT_BUCKET}/*" \
