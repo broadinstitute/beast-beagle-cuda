@@ -2,8 +2,13 @@ FROM nvidia/cuda:11.0.3-devel-ubuntu20.04
 
 # CUDA version must be compatible with driver version of host:
 #      via: https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html
-# see also: https://cloud.google.com/container-optimized-os/docs/how-to/run-gpus#install
-#           https://cloud.google.com/container-optimized-os/docs/release-notes
+#
+# Note: The container-optimized OS (COS) images used to host dsub docker containers
+#       have NVIDIA driver versions that lag current versions. The nvidia/cuda baseimage
+#       baseimage above should use a CUDA version compatible with the driver in the 
+#       current COS image.
+#           see: https://cloud.google.com/container-optimized-os/docs/how-to/run-gpus#install
+#                https://cloud.google.com/container-optimized-os/docs/release-notes
 #
 # CUDA Toolkit          Linux x86_64 Driver Version
 #--------------------------------------------------
@@ -31,8 +36,6 @@ FROM nvidia/cuda:11.0.3-devel-ubuntu20.04
 # CUDA 8.0 (8.0.44)     >= 367.48
 # CUDA 7.5 (7.5.16)     >= 352.31
 # CUDA 7.0 (7.0.28)     >= 346.46
-#
-# As of 2019-02-26, driver version 396.37 is suggested
 
 LABEL maintainer "Daniel Park <dpark@broadinstitute.org>"
 LABEL maintainer_other "Christopher Tomkins-Tinch <tomkinsc@broadinstitute.org>"
