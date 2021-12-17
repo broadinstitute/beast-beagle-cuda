@@ -1,7 +1,7 @@
 FROM nvidia/cuda:11.0.3-devel-ubuntu20.04
 
 # CUDA version must be compatible with driver version of host:
-#      via: https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html
+#       via: https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html
 #
 # Note: The container-optimized OS (COS) images used to host dsub docker containers
 #       have NVIDIA driver versions that lag current versions. The nvidia/cuda baseimage
