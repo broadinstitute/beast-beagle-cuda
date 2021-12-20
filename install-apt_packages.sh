@@ -10,17 +10,23 @@ echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections
 # Add some basics
 apt-get update
 #--no-install-recommends
+# See here for packages required to build beagle:
+#   https://github.com/beagle-dev/beagle-lib/wiki/LinuxInstallInstructions
+
 apt-get install -y -qq \
 	lsb-release ca-certificates wget rsync curl \
 	python-crcmod less nano vim git locales make \
 	dirmngr \
 	liblz4-tool pigz bzip2 lbzip2 zstd \
-	libtool autoconf g++-6 gcc-6 \
+	cmake build-essential autoconf automake libtool git pkg-config \
 	ant \
-	openjdk-8-jre openjdk-8-jdk
+	openjdk-11-jre openjdk-11-jdk
     #
 
 mkdir -p /usr/local/cuda/bin
+# debugging:
+ls -1 /usr/bin | grep "gcc"
+
 ln -s /usr/bin/gcc-6 /usr/local/cuda/bin/gcc
 ln -s /usr/bin/g++-6 /usr/local/cuda/bin/g++
 
