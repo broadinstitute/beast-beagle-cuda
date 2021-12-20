@@ -11,7 +11,7 @@ FROM nvidia/cuda:11.0.3-devel-ubuntu20.04
 #                https://cloud.google.com/container-optimized-os/docs/release-notes
 #
 # CUDA Toolkit          Linux x86_64 Driver Version
-#--------------------------------------------------
+# -------------------------------------------------
 # CUDA 11.5.1           >= 495.29.05
 # CUDA 11.4.3           >= 470.82.01
 # CUDA 11.4.2           >= 470.57.02
