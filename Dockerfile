@@ -6,7 +6,7 @@ FROM nvidia/cuda:11.0.3-devel-ubuntu20.04
 # Note: The container-optimized OS (COS) images used to host dsub docker containers
 #       have NVIDIA driver versions that lag current versions. The nvidia/cuda baseimage
 #       baseimage above should use a CUDA version compatible with the driver in the 
-#       current COS image.
+#       current COS image. 
 #           see: https://cloud.google.com/container-optimized-os/docs/how-to/run-gpus#install
 #                https://cloud.google.com/container-optimized-os/docs/release-notes
 #
