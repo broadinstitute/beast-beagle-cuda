@@ -24,8 +24,6 @@ apt-get install -y -qq \
     #
 
 mkdir -p /usr/local/cuda/bin
-# debugging:
-ls -lah /usr/bin | grep "gcc"
 
 ln -s /usr/bin/gcc-9 /usr/local/cuda/bin/gcc
 ln -s /usr/bin/g++-9 /usr/local/cuda/bin/g++
