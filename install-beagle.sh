@@ -7,7 +7,11 @@ nvcc --help
 cd /opt/docker
 
 # beagle 3.1.2, known working with beast 1.10.5pre
-git clone --depth=1 --branch="v3.1.2" https://github.com/beagle-dev/beagle-lib.git
+#git clone --depth=1 --branch="v3.1.2" https://github.com/beagle-dev/beagle-lib.git
+# localize beagle pinned to commit aee7aae with changes since v3.1.2 release
+git clone --depth=1 https://github.com/beagle-dev/beagle-lib.git
+git checkout aee7aae
+
 cd beagle-lib
 
 mkdir build
