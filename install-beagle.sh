@@ -10,10 +10,9 @@ cd /opt/docker
 git clone --depth=1 --branch="v3.1.2" https://github.com/beagle-dev/beagle-lib.git
 cd beagle-lib
 
-./autogen.sh
-./configure --disable-sse --disable-march-native --prefix=/usr/local
-
-make
+mkdir build
+cd build
+cmake -DBUILD_OPENCL=OFF -DCMAKE_INSTALL_PREFIX:PATH=/usr/local ..
 make install
 make check
 
