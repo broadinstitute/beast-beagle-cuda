@@ -25,10 +25,10 @@ apt-get install -y -qq \
 
 mkdir -p /usr/local/cuda/bin
 # debugging:
-ls -1 /usr/bin | grep "gcc"
+ls -lah /usr/bin | grep "gcc"
 
-ln -s /usr/bin/gcc-6 /usr/local/cuda/bin/gcc
-ln -s /usr/bin/g++-6 /usr/local/cuda/bin/g++
+ln -s /usr/bin/gcc-9 /usr/local/cuda/bin/gcc
+ln -s /usr/bin/g++-9 /usr/local/cuda/bin/g++
 
 # Auto-detect platform
 DEBIAN_PLATFORM="$(lsb_release -c -s)"
