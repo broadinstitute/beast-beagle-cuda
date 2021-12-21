@@ -10,6 +10,8 @@ rm BEASTv${beast_version}.tgz
 
 echo "ls -1"
 ls -1
+echo "ls -1 BEASTv${beast_version}"
+ls -1 BEASTv${beast_version}
 
 mv BEASTv${beast_version}/bin/* /usr/local/bin
 mv BEASTv${beast_version}/lib/* /usr/local/lib
