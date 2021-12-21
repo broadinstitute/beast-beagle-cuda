@@ -2,6 +2,8 @@
 
 set -e -o pipefail
 
+nvcc --help
+
 cd /opt/docker
 
 # beagle 3.1.2, known working with beast 1.10.5pre
