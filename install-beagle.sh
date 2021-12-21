@@ -25,6 +25,9 @@ ls -1 .
 echo "ls ./examples"
 ls -1 ./examples
 
+echo "ls ./examples/synthetictest"
+ls -1 ./examples/synthetictest
+
 echo "ls ../"
 ls -1 ../
 
