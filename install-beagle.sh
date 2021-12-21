@@ -10,9 +10,8 @@ cd /opt/docker
 #git clone --depth=1 --branch="v3.1.2" https://github.com/beagle-dev/beagle-lib.git
 # localize beagle pinned to commit aee7aae with changes since v3.1.2 release
 git clone --depth=1 https://github.com/beagle-dev/beagle-lib.git
-git checkout aee7aae
-
 cd beagle-lib
+git checkout aee7aae
 
 mkdir build
 cd build
