@@ -35,7 +35,11 @@ DEBIAN_PLATFORM="$(lsb_release -c -s)"
 echo "Debian platform: $DEBIAN_PLATFORM"
 
 # Add source for gcloud sdk
-echo "deb http://packages.cloud.google.com/apt cloud-sdk-$DEBIAN_PLATFORM main" | tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
+echo "deb http://packages.cloud.google.com/apt cloud-sdk main" | tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
+# The line below is commented out since there is not a "focal" build of cloud-sdk in the apt repo (20.04); 
+#   remove the line above and uncomment below when available.
+# echo "deb http://packages.cloud.google.com/apt cloud-sdk-$DEBIAN_PLATFORM main" | tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
+
 curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
 
 # Install gcloud and aws
