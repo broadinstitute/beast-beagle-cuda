@@ -18,11 +18,12 @@ cd build
 cmake -DBUILD_OPENCL=OFF -DCMAKE_INSTALL_PREFIX:PATH=/usr/local ..
 make install
 
-echo "ls build"
+echo "ls ."
+pwd
 ls -lah .
 
-echo "ls examples/synthetictest"
-ls -lah ../examples/synthetictest
+echo "ls ../"
+ls -lah ../
 
 ldconfig # LD_LIBRARY_PATH is also set in the Dockerfile to include /usr/local/lib
 
