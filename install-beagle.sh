@@ -2,6 +2,9 @@
 
 set -e -o pipefail
 
+# report CPU info
+lscpu
+
 cd /opt/docker
 
 # beagle 3.1.2, known working with beast 1.10.5pre
@@ -13,7 +16,7 @@ git checkout aee7aae
 
 mkdir build
 cd build
-cmake -DBUILD_OPENCL=OFF -DCMAKE_INSTALL_PREFIX:PATH=/usr/local ..
+cmake -DBUILD_OPENCL=OFF -BEAGLE_OPTIMIZE_FOR_NATIVE_ARCH=false -DCMAKE_INSTALL_PREFIX:PATH=/usr/local ..
 make install
 
 ldconfig # LD_LIBRARY_PATH is also set in the Dockerfile to include /usr/local/lib
