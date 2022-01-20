@@ -21,7 +21,7 @@ cd $OUT_DIR
 # report beagle info including number of GPUs
 beast -beagle_info > "${OUTPUT_PREFIX}.out"
 # report CPU info
-lscpu >> "${OUTPUT_PREFIX}.out"
+lscpu | tee -a "${OUTPUT_PREFIX}.out"
 pwd 
 beast -beagle_multipartition off -beagle_GPU -beagle_cuda -beagle_double -beagle_scaling always -beagle_order ${BEAGLE_ORDER} ${BEAST_EXTRA_ARGS} ${INPUT_FILE} >> "${OUTPUT_PREFIX}.out"
 ls 
