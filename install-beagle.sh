@@ -20,7 +20,8 @@ cd build
 #cmake -DBUILD_OPENCL=OFF -DBEAGLE_OPTIMIZE_FOR_NATIVE_ARCH=false -DCMAKE_INSTALL_PREFIX:PATH=/usr/local ..
 #cmake -DBUILD_OPENCL=OFF -DBEAGLE_OPTIMIZE_FOR_NATIVE_ARCH=true -DCMAKE_INSTALL_PREFIX:PATH=/usr/local ..
 # generic 64-bit cpu
-cmake -DBUILD_OPENCL=OFF -DBEAGLE_OPTIMIZE_FOR_NATIVE_ARCH=false -DCMAKE_CXX_FLAGS="-march=x86-64" -DCMAKE_INSTALL_PREFIX:PATH=/usr/local ..
+#cmake -DBUILD_OPENCL=OFF -DBEAGLE_OPTIMIZE_FOR_NATIVE_ARCH=false -DCMAKE_CXX_FLAGS="-march=x86-64 -mtune=intel" -DCMAKE_INSTALL_PREFIX:PATH=/usr/local ..
+cmake -DBUILD_OPENCL=OFF -DBEAGLE_OPTIMIZE_FOR_NATIVE_ARCH=false -DCMAKE_CXX_FLAGS="-march=haswell -mtune=intel" -DCMAKE_INSTALL_PREFIX:PATH=/usr/local ..
 make install
 
 ldconfig # LD_LIBRARY_PATH is also set in the Dockerfile to include /usr/local/lib
