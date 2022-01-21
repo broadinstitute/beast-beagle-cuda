@@ -4,6 +4,7 @@ set -e -o pipefail
 
 # report CPU info
 lscpu
+cat /proc/cpuinfo
 
 cd /opt/docker
 
