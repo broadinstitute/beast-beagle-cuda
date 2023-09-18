@@ -16,9 +16,9 @@
 #### pull dev hotfix version from Marc
 git clone --depth=1 --branch hmc-clock https://github.com/beast-dev/beast-mcmc.git
 cd beast-mcmc
-ant dist
-mv bin/* /usr/local/bin
-mv lib/* /usr/local/lib
+ant linux
+mv release/Linux/BEAST*/bin/* /usr/local/bin
+mv release/Linux/BEAST*/lib/* /usr/local/lib
 
 #### test
 beast -beagle_info
