@@ -37,7 +37,8 @@ FROM nvidia/cuda:11.0.3-devel-ubuntu20.04
 # CUDA 7.5 (7.5.16)     >= 352.31
 # CUDA 7.0 (7.0.28)     >= 346.46
 
-LABEL maintainer "Daniel Park <dpark@broadinstitute.org>"
+LABEL maintainer "Joon Klaps <joon.klaps@kuleuven.be>"
+LABEL maintainer_other "Daniel Park <dpark@broadinstitute.org>"
 LABEL maintainer_other "Christopher Tomkins-Tinch <tomkinsc@broadinstitute.org>"
 
 COPY install-*.sh /opt/docker/
