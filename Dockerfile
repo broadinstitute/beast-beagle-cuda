@@ -40,7 +40,6 @@ FROM nvidia/cuda:11.0.3-devel-ubuntu20.04
 LABEL maintainer "Daniel Park <dpark@broadinstitute.org>"
 LABEL maintainer_other "Christopher Tomkins-Tinch <tomkinsc@broadinstitute.org>"
 
-
 COPY install-*.sh /opt/docker/
 
 # System packages, Google Cloud SDK, and locale
