@@ -1,13 +1,14 @@
 #!/bin/bash
 
-beast_version="BEAST_X_v10.5.0-beta3"
+beast_name="v10.5.0-beta3"
+beast_name="BEAST_X_${beast_name}"
 
-wget --quiet https://github.com/beast-dev/beast-mcmc/releases/download/v10.5.0-beta3/${beast_version}.tgz -O ${beast_version}.tgz
+wget --quiet https://github.com/beast-dev/beast-mcmc/releases/download/${beast_version}/${beast_name}.tgz -O ${beast_name}.tgz
 
-tar -xzpf ${beast_version}.tgz && mv BEAST*/ ${beast_version}
-rm ${beast_version}.tgz
+tar -xzpf ${beast_name}.tgz && mv BEAST*/ ${beast_name}
+rm ${beast_name}.tgz
 
-mv ${beast_version}/bin/* /usr/local/bin
-mv ${beast_version}/lib/* /usr/local/lib
+mv ${beast_name}/bin/* /usr/local/bin
+mv ${beast_name}/lib/* /usr/local/lib
 
 beast -beagle_info
