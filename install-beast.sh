@@ -1,7 +1,7 @@
 #!/bin/bash
 
 beast_name="v10.5.0-beta3"
-beast_name="BEAST_X_${beast_name}"
+beast_name="BEAST_X_${beast_version}"
 
 wget --quiet https://github.com/beast-dev/beast-mcmc/releases/download/${beast_version}/${beast_name}.tgz -O ${beast_name}.tgz
 
