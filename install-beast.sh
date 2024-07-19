@@ -1,14 +1,14 @@
 #!/bin/bash
 
-beast_version="1.10.5pre_thorney_0.1.2"
-# uncomment when out of pre-release:
-#wget --quiet https://github.com/beast-dev/beast-mcmc/releases/download/v${beast_version}/BEASTv${beast_version}.tgz
-wget --quiet https://github.com/beast-dev/beast-mcmc/releases/download/v1.10.5pre_thorney_v0.1.2/BEASTv1.10.5pre_thorney_0.1.2.tgz -O BEASTv${beast_version}.tgz
+beast_version="v10.5.0-beta3"
+beast_name="BEAST_X_${beast_version}"
 
-tar -xzpf BEASTv${beast_version}.tgz
-rm BEASTv${beast_version}.tgz
+wget --quiet https://github.com/beast-dev/beast-mcmc/releases/download/${beast_version}/${beast_name}.tgz -O ${beast_name}.tgz
 
-mv BEASTv${beast_version}/bin/* /usr/local/bin
-mv BEASTv${beast_version}/lib/* /usr/local/lib
+tar -xzpf ${beast_name}.tgz && mv BEAST*/ ${beast_name}
+rm ${beast_name}.tgz
+
+mv ${beast_name}/bin/* /usr/local/bin
+mv ${beast_name}/lib/* /usr/local/lib
 
 beast -beagle_info
